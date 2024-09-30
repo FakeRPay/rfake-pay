@@ -1,9 +1,9 @@
 // Sample user data
 const users = [
-    { username: "dunn", password: "dunn123", balance: 1000, isAdmin: false },
-    { username: "mall", password: "mall123", balance: 2000, isAdmin: false },
-    { username: "rani", password: "rani123", balance: 1500, isAdmin: false },
-    { username: "vish", password: "vishadmin", balance: 5000, isAdmin: true },
+    { username: "user1", password: "pass1", balance: 1000, isAdmin: false },
+    { username: "user2", password: "pass2", balance: 2000, isAdmin: false },
+    { username: "user3", password: "pass3", balance: 1500, isAdmin: false },
+    { username: "admin", password: "adminpass", balance: 5000, isAdmin: true },
 ];
 
 let currentUser = null;
