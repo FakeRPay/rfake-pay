@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFake Pay</title>
+    <link rel="stylesheet" href="styles.css">  <!-- This should work if styles.css is in the same folder -->
+</head>
+<body>
+    <div id="app">
+        <h1>RFAKE PAY</h1>
+
+        <div id="loginPage" class="page active">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p class="error" id="loginError"></p>
+        </div>
+
+        <div id="homePage" class="page">
+            <h2>Welcome, <span id="currentUserName"></span></h2>
+            <button onclick="showTransferPage()">Transfer Money</button>
+            <button onclick="showBorrowRequests()">View Borrow Requests</button>
+            <button onclick="showBorrowList()">View Borrow List</button>
+            <button onclick="showEditUser()">Edit User</button>
+            <button onclick="showBorrowPage()">Borrow Money</button>
+            <button onclick="logout()">Logout</button>
+            <h3>Balance: ₹<span id="currentBalance"></span></h3>
+        </div>
+
+        <div id="transferPage" class="page">
+            <h2>Transfer Money</h2>
+            <input type="text" id="receiverUsername" placeholder="Receiver Username">
+            <input type="number" id="transferAmount" placeholder="Amount">
+            <button onclick="transferMoney()">Transfer</button>
+            <button onclick="showHomePage()">Back</button>
+            <p class="error" id="transferError"></p>
+        </div>
+
+        <div id="borrowPage" class="page">
+            <h2>Borrow Money</h2>
+            <input type="text" id="borrowUser" placeholder="User to Borrow From">
+            <input type="number" id="borrowAmount" placeholder="Amount">
+            <button onclick="requestBorrow()">Request Borrow</button>
+            <button onclick="showHomePage()">Back</button>
+            <p class="error" id="borrowError"></p>
+        </div>
+
+        <div id="borrowRequestsPage" class="page">
+            <h2>Borrow Requests</h2>
+            <div id="borrowRequests"></div>
+            <button onclick="showHomePage()">Back</button>
+        </div>
+
+        <div id="borrowListPage" class="page">
+            <h2>Borrow List</h2>
+            <div id="borrowList"></div>
+            <button onclick="showHomePage()">Back</button>
+        </div>
+
+        <div id="editUserPage" class="page">
+            <h2>Edit User Balance</h2>
+            <input type="text" id="editUsername" placeholder="Username">
+            <input type="number" id="editAmount" placeholder="New Balance">
+            <button onclick="editUserBalance()">Edit Balance</button>
+            <button onclick="showHomePage()">Back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>  <!-- This should work if script.js is in the same folder -->
+</body>
+</html>
